@@ -52,7 +52,6 @@
             <path fill-rule="evenodd"
                   d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
                   clip-rule="evenodd"/>
-
           </svg>
           Вход</a>
       </li>
@@ -111,40 +110,48 @@
         </ul>
         <a class="button button-all" href="#">Посмотреть все</a>
       </section>
-      <section class="gallery">
-        <h2 class="gallery-title">Фотогалерея</h2>
-        <img class="slider-image" src="images/gallery-1.jpg" width="390" height="250" alt="Примеры работ">
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
 
-        <ol class="slider-division">
-          <li class="slider-division-item">
-            <button class="slider-division-button slider-division-button-current" type="button">
-              <span class="visually-hidden">1 фото</span>
-            </button>
-          </li>
-          <li class="slider-division-item">
-            <button class="slider-division-button" type="button">
-              <span class="visually-hidden">2 фото</span>
-            </button>
-          </li>
-          <li class="slider-division-item">
-            <button class="slider-division-button" type="button">
-              <span class="visually-hidden">3 фото</span>
-            </button>
-          </li>
-          <li class="slider-division-item">
-            <button class="slider-division-button" type="button">
-              <span class="visually-hidden">4 фото</span>
-            </button>
-          </li>
-        </ol>
+      <section class="gallery">
+        <div class="slider">
+          <div class="slider-wrapper">
+            <h2 class="gallery-title">Фотогалерея</h2>
+            <img class="slider-image" src="images/gallery-1.jpg" width="390" height="250" alt="Примеры работ">
+            <div class="slider-controls">
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+
+            <ol class="slider-division">
+              <li class="slider-division-item">
+                <button class="slider-division-button slider-division-button-current" type="button">
+                  <span class="visually-hidden">1 фото</span>
+                </button>
+              </li>
+              <li class="slider-division-item">
+                <button class="slider-division-button" type="button">
+                  <span class="visually-hidden">2 фото</span>
+                </button>
+              </li>
+              <li class="slider-division-item">
+                <button class="slider-division-button" type="button">
+                  <span class="visually-hidden">3 фото</span>
+                </button>
+              </li>
+              <li class="slider-division-item">
+                <button class="slider-division-button" type="button">
+                  <span class="visually-hidden">4 фото</span>
+                </button>
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
     </div>
+
     <div class="index-columns">
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
@@ -169,15 +176,16 @@
         <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="field-group appointment-form-date">
             <label class="form-label" for="appointment-date">Дата</label>
-            <input type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
+            <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
           </p>
           <p class="field-group appointment-form-time">
             <label class="form-label" for="appointment-time">Время</label>
-            <input type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
+            <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
           </p>
           <p class="field-group appointment-form-phone">
             <label class="form-label" for="appointment-form-phone">Телефон</label>
-            <input type="text" id="appointment-form-phone" name="appointment-form-phone" placeholder="+7 800 000-00-00">
+            <input class="field" type="text" id="appointment-form-phone" name="appointment-form-phone"
+                   placeholder="+7 800 000-00-00">
           </p>
           <p class="field-group appointment-form-name">
             <label class="form-label" for="appointment-name">Ваше имя</label>
@@ -206,9 +214,12 @@
     <section class="newsletter">
       <h2 class="page-footer-title">Получайте лучшие предложения</h2>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="newsletter-email">Email</label>
-        <input class="field" placeholder="email@example.com" type="email" name="newsletter-email" id="newsletter-email"
-               required>
+        <p class="newsletter-email field-group">
+          <label class="visually-hidden" for="newsletter-email">Email</label>
+          <input class="field" placeholder="email@example.com" type="email" name="newsletter-email"
+                 id="newsletter-email"
+                 required>
+        </p>
         <button class="button newsletter-button" type="submit">
           <span class="visually-hidden">Отправить</span>
         </button>
