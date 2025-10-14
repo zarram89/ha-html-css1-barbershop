@@ -2,8 +2,14 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Барбершоп «Бородинский» — стиль, уход и атмосфера.">
+  <meta name="theme-color" content="#000000">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Барбершоп «Бородинский»</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" as="font">
 </head>
 
 <body>
@@ -23,7 +29,7 @@
     <ul class="navigation-list navigation-user">
       <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <svg class="navigation-icon" role="img" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm-.665 5.249a6.5 6.5 0 111.414-1.414l3.958 3.958-1.414 1.414-3.958-3.958z" />
           </svg>
           <span class="visually-hidden">Поиск</span>
@@ -31,7 +37,7 @@
       </li>
       <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <svg class="navigation-icon" role="img" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09 6L3.577.905 3.662 0h8.676l.086.905L12.909 6h2.724l-.14 1.124-1 8-.11.876H1.617l-.11-.876-1-8L.368 6H3.09zM5.1 6h5.8l-.38-4H5.48L5.1 6zm-1.717 8l-.75-6h10.734l-.75 6H3.383zM8.5 9.5v3h2v-3h-2zm-3 3v-3h2v3h-2z" />
           </svg>
           <span class="visually-hidden">Корзина</span>
@@ -48,7 +54,7 @@
                 <p class="cart-item-title">Стрижка машинкой</p>
                 <p class="cart-item-price">800 ₽</p>
                 <button type="button" class="cart-item-button button">
-                  <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <svg role="img" aria-hidden="true" focusable="false" width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
                   </svg>
                   <span class="visually-hidden">Удалить из корзины</span>
@@ -70,7 +76,8 @@
       </li>
       <li class="navigation-item">
         <a class="navigation-link navigation-link-login" href="#">
-          <svg class="navigation-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="navigation-icon" role="img" aria-hidden="true" focusable="false"
+               width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h5v12H9v2h7V0H9v2zM4.293 3.707L7.536 6.95H0v2h7.536l-3.243 3.242 1.414 1.415 4.95-4.95.707-.707-.707-.707-4.95-4.95-1.414 1.414z" fill="#BDBDBD" />
           </svg>
           Вход
@@ -83,10 +90,10 @@
 <main class="main-container main-index">
   <div class="page-container">
     <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
-    <img class="logo" src="images/logo-full.svg" width="367" height="152" alt="Логотип Барбершопа «Бородинский»">
+    <img class="logo" src="images/logo-full.svg" width="367" height="152" alt="Логотип Барбершопа">
 
-    <section class="advantages">
-      <h2 class="visually-hidden">Преимущества</h2>
+    <section class="advantages" aria-labelledby="advantages-title">
+      <h2 id="advantages-title" class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
         <li class="advantages-item">
           <h3 class="advantages-title">Быстро</h3>
@@ -95,9 +102,7 @@
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title">Круто</h3>
-          <p class="advantages-description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или
-            кино!
-            Во всяком случае внешне.</p>
+          <p class="advantages-description">Забудьте, как вы стриглись раньше.<br> Мы сделаем из вас звезду футбола или кино!<br> Во всяком случае внешне.</p>
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title">Дорого</h3>
@@ -133,7 +138,7 @@
       </section>
 
       <section class="gallery">
-        <div class="slider">
+        <div class="slider" aria-live="polite" role="group">
           <div class="slider-wrapper">
             <h2 class="gallery-title">Фотогалерея</h2>
             <img class="slider-image" src="images/gallery-1.jpg" width="390" height="250" alt="Примеры работ">
@@ -141,7 +146,7 @@
               <button class="slider-button slider-prev" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
-              <button class="slider-button slider-next" type="button">
+              <button class="slider-button slider-next" type="button" >
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
@@ -200,33 +205,35 @@
                 <label class="form-label" for="appointment-date">Дата</label>
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg  class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"><path d="M8 14A6 6 0 108 2a6 6 0 000 12zm1.27-8.73a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0zm0 2.23V11H6.73V7.5h2.54z"/></svg>
+                    <svg class="tooltip-icon"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="16" height="16" fill="currentColor"><path d="M8 14A6 6 0 108 2a6 6 0 000 12zm1.27-8.73a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0zm0 2.23V11H6.73V7.5h2.54z"/></svg>
                   </button>
                   <span class="tooltip-text" role="tooltip"  id="tooltip-label-date">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</span>
                 </span>
               </span>
-            <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
+            <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020" required>
           </p>
           <p class="field-group appointment-form-time">
               <span class="form-label form-label-icon">
                 <label class="form-label" for="appointment-time">Время</label>
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-time">
-                    <svg  class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"><path d="M8 14A6 6 0 108 2a6 6 0 000 12zm1.27-8.73a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0zm0 2.23V11H6.73V7.5h2.54z"/></svg>
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false"
+                         width="16" height="16" fill="currentColor"><path d="M8 14A6 6 0 108 2a6 6 0 000 12zm1.27-8.73a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0zm0 2.23V11H6.73V7.5h2.54z"/></svg>
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-time">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</span>
                 </span>
               </span>
-            <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
+            <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:00" required>
           </p>
           <p class="field-group appointment-form-phone">
             <label class="form-label" for="appointment-phone">Телефон</label>
-            <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 000-00-00">
+            <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 000-00-00" required>
           </p>
           <p class="field-group appointment-form-name">
             <label class="form-label" for="appointment-name">Ваше имя</label>
-            <input class="field" type="text" id="appointment-name" name="appointment-name">
+            <input class="field" type="text" id="appointment-name" name="appointment-name" required>
           </p>
           <button class="button appointment-submit" type="submit">Записаться</button>
         </form>
@@ -235,12 +242,11 @@
   </div>
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer" aria-label="Подвал сайта">
   <div class="page-footer-container">
     <section class="footer-contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <img class="footer-contacts-logo" src="images/logo-footer.svg" width="187" height="24"
-           alt="Логотип Барбершоп «Бородинский»">
+      <img class="footer-contacts-logo" src="images/logo-footer.svg" width="187" height="24" alt="Логотип Барбершоп «Бородинский»">
       <address class="footer-contacts-address">
         <p class="footer-about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         <a class="footer-contacts-address-phone" href="tel:+78005558628">+7 800 555-86-28</a>
